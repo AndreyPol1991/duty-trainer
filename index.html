@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Дежурство в «Минутке»</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%230b0f14%27/%3E%3Cpath d=%27M4 17h7l3-8 4 15 3-7h7%27 fill=%27none%27 stroke=%27%2334d399%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
 <meta name="description" content="Практический тренажёр по мониторингу и логированию для системных аналитиков: три сигнала наблюдаемости, поиск по логам в стиле Kibana, метрики и перцентили, дашборды в стиле Grafana, трассы, алерты по симптомам, SLO и бюджет ошибок, требования к наблюдаемости в постановке.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -495,6 +496,8 @@ svg text { font-family: var(--f-body); }
   .hud .trust span.lbl, .tb-btn .lbl { display: none; }
   .brand .prod small { display: none; }
 }
+/* Узкий телефон: подпись в шапке прячем — иначе с загруженными шрифтами последняя кнопка уезжает за край. */
+@media (max-width: 400px) { .brand .prod { display: none; } }
 @media (max-width: 520px) {
   .weeks { grid-template-columns: minmax(0, 1fr); }
   .topbar { gap: 8px; padding: 8px 10px; }
